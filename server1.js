@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-const port = 3000; // have to change this to a range within 5000- 5500 when connected to the Encs server
+const port =  process.env.PORT || 4000; // have to change this to a range within 5000- 5500 when connected to the Encs server
 
 // Parse URL-encoded bodies (as sent by HTML forms)
 app.use(express.urlencoded({ extended: true }));
